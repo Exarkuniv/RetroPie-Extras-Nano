@@ -10,3 +10,7 @@ if you want background music i have figured that out also
 all you need to do is add a ``music`` folder here 
 
 ``/opt/ares/configs/all/emulationstation``
+
+ALSO
+as of right now, you do need to install the runcommand to get the ports to work. 
+possiable that will be fixed but i dont know how
