@@ -7,4 +7,5 @@ I still have a handfull of edits i need to get done, but as of 9-20-23 all the s
 there are a few i have not tested yet as i dont have the game files (yet)
 
 if you want background music i have figured that out also
-all you need to do is add a music folder here ``/opt/ares/configs/all/emulationstation``
+all you need to do is add a ``music`` folder here 
+``/opt/ares/configs/all/emulationstation``
