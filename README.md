@@ -14,3 +14,8 @@ all you need to do is add a ``music`` folder here
 ALSO
 as of right now, you do need to install the runcommand to get the ports to work. 
 possiable that will be fixed but i dont know how
+
+Fix to get sound on Quake 2. for whatever reason the control panel will swith to the analog output for the sound, 
+you will have to switch it to HDMI if thats what you have.
+
+i install the ``PulseAudio Volume Control`` app and just disable analog output, since using command line was abit confusing. 
