@@ -3,6 +3,10 @@ RetroPie Extras install scripts for Jetson Nano
 
 This is all WIP right now. 
 
+**UPDATE**
+AS id 10-19-23 Im still working on these, i have got more of the older ones to work and will update soonish. 
+i have come across a few bugs and a script that breaks something with the cmake. so im hunting that down and seeing WTF is up with that
+
 I still have a handfull of edits i need to get done, but as of 9-20-23 all the scripts do install. and almost all do play
 there are a few i have not tested yet as i dont have the game files (yet)
 
