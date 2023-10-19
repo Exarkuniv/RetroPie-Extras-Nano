@@ -26,6 +26,6 @@ you will have to switch it to HDMI if thats what you have.
 
 i install the ``PulseAudio Volume Control`` app and just disable analog output, since using command line was abit confusing. 
 
-to get the rigelengine script to install, you need to change the GCC and GCC++ from version 7 to version 10 and 11
+to get the rigelengine and dxx-rebirth script to install, you need to change the GCC and GCC++ from version 7 to version 10 and 11
 
 so use ``sudo update-alternatives --config gcc`` and ``sudo update-alternatives --config gcc++`` and change it to whatever number the higher version is on your system
