@@ -72,7 +72,7 @@ function add_games_gzdoom() {
     local params=("+fullscreen 1")
     local launcher_prefix="DOOMWADDIR=$romdir/ports/doom"
 
-    _add_games_lr-prboom "$launcher_prefix $md_inst/$md_id +set vid_preferbackend 3 -iwad %ROM%"
+    _add_games_lr-prboom "$launcher_prefix $md_inst/$md_id -iwad %ROM%"
 }
 
 function configure_gzdoom() {

@@ -17,26 +17,23 @@ rp_module_licence="GPL2 https://raw.githubusercontent.com/STJr/SRB2/master/LICEN
 rp_module_section="prt"
 
 function depends_srb2() {
-   getDepends cmake libsdl2-dev libsdl2-mixer-dev libgme-dev libpng++-dev libopenmpt-dev
-
+    getDepends libpng-dev zlib1g-dev libsdl2-dev libsdl2-mixer-dev libgme-dev libopenmpt-dev libcurl4-openssl-dev
 }
 
 function sources_srb2() {
-    gitPullOrClone "$md_build" https://github.com/STJr/SRB2.git "SRB2_release_2.2.11"
-    downloadAndExtract "$__archive_url/srb2-assets.tar.gz" "$md_build"
+    gitPullOrClone "$md_build" https://git.do.srb2.org/STJr/SRB2.git "master" a4a3b5b
+    downloadAndExtract "https://github.com/Exarkuniv/game-data/blob/main/srb2-assets-1.tar.gz" "$md_build"
+    downloadAndExtract "https://github.com/Exarkuniv/game-data/blob/main/srb2-assets-2.tar.gz" "$md_build"
 }
 
 function build_srb2() {
-    mkdir build
-    cd build
-    cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$md_inst"
     make
-    md_ret_require="$md_build/build/bin/lsdlsrb2"
+    md_ret_require="$md_build/bin/lsdl2srb2"
 }
 
 function install_srb2() {
     # copy and dereference, so we get a srb2 binary rather than a symlink to lsdlsrb2-version
-    cp -L 'build/bin/lsdlsrb2' "$md_inst/srb2"
+    cp -L '/home/aresuser/ARES-Setup/tmp/build/srb2/bin/lsdl2srb2' "$md_inst/srb2"
     md_ret_files=(
         'assets/installer/music.dta'
         'assets/installer/player.dta'

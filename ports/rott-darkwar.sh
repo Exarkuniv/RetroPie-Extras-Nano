@@ -16,16 +16,16 @@ rp_module_desc="ROTT - Rise of the Triad - Dark War"
 rp_module_licence="GPL2 https://raw.githubusercontent.com/LTCHIPS/rottexpr/master/LICENSE.DOC"
 rp_module_help="Please add your full version ROTT files to $romdir/ports/rott/ to play."
 rp_module_repo="git https://github.com/LTCHIPS/rottexpr.git master"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="!mali !x86"
 
 function depends_rott-darkwar() {
-    getDepends libsdl2-dev libsdl2-mixer-dev fluidsynth libfluidsynth1 libfluidsynth-dev fluid-soundfont-gs fluid-soundfont-gm
+    getDepends libsdl2-dev libsdl2-mixer-dev fluidsynth libfluidsynth-dev fluid-soundfont-gm fluid-soundfont-gs
 
 }
 
 function sources_rott-darkwar() {
-    gitPullOrClone
+    gitPullOrClone "$md_build" https://github.com/LTCHIPS/rottexpr.git master
 }
 
 function build_rott-darkwar() {

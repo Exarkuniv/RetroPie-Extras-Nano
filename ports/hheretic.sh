@@ -14,11 +14,11 @@ rp_module_desc="Heretic GL port"
 rp_module_help="Please put your heretic.wad in the roms/ports/heretic folder" 
 rp_module_licence="GNU https://sourceforge.net/p/hhexen/hhexen/ci/master/tree/LICENSE.md"
 rp_module_repo="wget https://sourceforge.net/projects/hhexen/files/hheretic/0.2.3/hheretic-0.2.3-src.tgz"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="!mali"
 
 function depends_hheretic() {
-    getDepends libsndifsdl2-dev libsdl-mixer1.2-dev libgl1 libsdl-image1.2-dev xorg 
+    getDepends libsndifsdl2-dev libsdl-mixer1.2-dev libgl1 libsdl-image1.2-dev
 }
 
 function sources_hheretic() {
@@ -52,6 +52,6 @@ function game_data_heretic() {
 
 function configure_hheretic() {
     mkRomDir "ports/heretic"
-    addPort "$md_id" "hheretic" "Heretic port" "XINIT: $md_inst/hheretic-gl -width 1920 -height 1080"
+    addPort "$md_id" "hheretic" "Heretic port" "$md_inst/hheretic-gl -width 1920 -height 1080"
    [[ "$md_mode" == "install" ]] && game_data_heretic
 }

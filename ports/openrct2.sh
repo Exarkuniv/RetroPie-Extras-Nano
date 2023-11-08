@@ -15,7 +15,7 @@ rp_module_desc="OpenRCT2 - RollerCoaster Tycoon 2 port"
 rp_module_licence="GNU https://github.com/OpenRCT2/OpenRCT2/blob/develop/licence.txt"
 rp_module_help="Copy g1.dat, The 772 default RCT2 objects. /n/nEasy to identify by sorting on date, /n/nsince all 772 have a similar timestamp (usually from 2002 or 2003/n/n Required: If you use the OpenRCT2 title sequence, no scenarios are needed./n/n Six Flags Magic Mountain.SC6/n/n is needed for the RCT2 title sequence."
 rp_module_repo="git https://github.com/OpenRCT2/OpenRCT2.git develop 618c5bd"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="noinstclean"
 
 
@@ -26,7 +26,7 @@ function depends_openrct2() {
 
 
 function sources_openrct2() {
-    gitPullOrClone "$md_build" https://github.com/OpenRCT2/OpenRCT2.git develop 618c5bd
+    gitPullOrClone "$md_build" https://github.com/OpenRCT2/OpenRCT2.git develop
 }
 
 function build_openrct2() {

@@ -23,7 +23,7 @@ function depends_bstone() {
 }
 
 function sources_bstone() {
-    gitPullOrClone "$md_build" https://github.com/bibendovsky/bstone.git master 0f01190
+    gitPullOrClone "$md_build" https://github.com/bibendovsky/bstone.git master
 }
 
 function build_bstone() {
@@ -63,12 +63,19 @@ function configure_bstone() {
 
 cat >"$md_conf_root/bibendovsky/bstone/bstone_config.txt" << _EOF_
 
-vid_renderer "software"
+vid_renderer "gl_3_2_c"
+vid_is_positioned "0"
+vid_x "0"
+vid_y "0"
+vid_width "1920"
+vid_height "1080"
+vid_is_vsync "1"
+vid_is_ui_stretched "1"
 vid_is_widescreen "1"
-vid_is_windowed "0"
 
 _EOF_
 
     [[ "$md_mode" == "install" ]] && game_data_bstone
-
+    chown -R $user:$user $md_conf_root/bibendovsky/bstone/bstone_config.txt
+     chown -R $user:$user /opt/ares/configs/ports/bibendovsky/bstone
 }

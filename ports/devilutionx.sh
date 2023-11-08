@@ -14,16 +14,15 @@ rp_module_id="devilutionx"
 rp_module_desc="devilutionx - Diablo Engine"
 rp_module_licence="https://raw.githubusercontent.com/diasurgical/devilutionX/master/LICENSE"
 rp_module_help="Copy your original diabdat.mpq file from Diablo to $romdir/ports/devilutionx."
-rp_module_repo="wget https://github.com/diasurgical/devilutionX/releases/download/1.5.0/devilutionx-linux-armhf.zip"
-rp_module_section="exp"
-rp_module_flags="!x86 !mali"
+rp_module_section="prt"
+rp_module_flags=""
 
 function depends_devilutionx() {
    getDepends cmake g++ libsdl2-mixer-dev libsdl2-ttf-dev libsodium-dev libfmt-dev
 }
 
 function sources_devilutionx() {
-    wget "https://github.com/diasurgical/devilutionX/releases/download/1.5.0/devilutionx-linux-aarch64.tar.xz" 
+    wget "https://github.com/diasurgical/devilutionX/releases/download/1.5.1/devilutionx-linux-aarch64.tar.xz" 
            tar -xvJf $md_build/devilutionx-linux-aarch64.tar.xz
 }
 

@@ -67,7 +67,8 @@ _EOF_
 cd $md_inst && ./fallout2-ce
 _EOF_
 
-    chmod +x "$script"
+    chmod 777 "$script"
+    chmod 777 "$scriptcfg"
     addPort "$md_id" "fallout2" "Fallout 2 Community Edition" "$md_inst/fallout2.sh"
 
 }

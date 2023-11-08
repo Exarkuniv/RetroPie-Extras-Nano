@@ -15,15 +15,15 @@ rp_module_desc="ROTT - Rise of the Triad - The Hunt Begins (Shareware)"
 rp_module_licence="GPL2 https://raw.githubusercontent.com/LTCHIPS/rottexpr/master/LICENSE.DOC"
 rp_module_help=
 rp_module_repo="git https://github.com/LTCHIPS/rottexpr.git master"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="!mali !x86"
 
 function depends_rott-huntbgin() {
-    getDepends libsdl2-dev libsdl2-mixer-dev fluidsynth libfluidsynth1 libfluidsynth-dev fluid-soundfont-gs fluid-soundfont-gm
+    getDepends libsdl2-dev libsdl2-mixer-dev fluidsynth libfluidsynth-dev fluid-soundfont-gm fluid-soundfont-gs
 }
 
 function sources_rott-huntbgin() {
-    gitPullOrClone
+    gitPullOrClone "$md_build" https://github.com/LTCHIPS/rottexpr.git master
 }
 
 function build_rott-huntbgin() {

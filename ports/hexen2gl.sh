@@ -19,7 +19,7 @@ rp_module_section="prt"
 rp_module_flags=""
 
 function depends_hexen2gl() {
-    getDepends cmake libsdl1.2-dev libsdl-net1.2-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev timidity freepats xorg
+    getDepends cmake libsdl1.2-dev libsdl-net1.2-dev libsdl-sound1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev timidity freepats
 }
 
 function sources_hexen2gl() {
@@ -49,8 +49,8 @@ function configure_hexen2gl() {
     mkRomDir "ports/hexen2"
     mkRomDir "ports/hexen2/portals"
 
-    addPort "$md_id" "hexen2" "Hexen II" "XINIT:$md_inst/glhexen2 -conwidth 800"
-    [[ -f "$romdir/ports/hexen2/portals/pak3.pak" ]] && addPort "$md_id" "hexen2p" "Hexen II -Portals of Praevus" "XINIT:$md_inst/glhexen2 -portals -conwidth 800"
+    addPort "$md_id" "hexen2" "Hexen II" "$md_inst/glhexen2 -conwidth 800"
+    [[ -f "$romdir/ports/hexen2/portals/pak3.pak" ]] && addPort "$md_id" "hexen2p" "Hexen II -Portals of Praevus" "$md_inst/glhexen2 -portals -conwidth 800"
 
     moveConfigDir "$home/.hexen2" "$romdir/ports/hexen2"
 

@@ -14,7 +14,7 @@ rp_module_desc="Hexen GL port"
 rp_module_help="Please put your heretic.wad in the roms/ports/hexen folder" 
 rp_module_licence="GNU https://sourceforge.net/p/hhexen/hhexen/ci/master/tree/LICENSE.md"
 rp_module_repo="wget https://sourceforge.net/projects/hhexen/files/hhexen/1.6.3/hhexen-1.6.3-src.tgz"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="!mali"
 
 function depends_hhexen() {
@@ -27,7 +27,7 @@ function sources_hhexen() {
 }
 
 function build_hhexen() {
-    ./configure --enable-fullscreen --with-audio=sdlmixer --with-datapath=$romdir/ports/heretic
+    ./configure --enable-fullscreen --with-audio=sdlmixer --with-datapath=$romdir/ports/hexen
 
     make
 
@@ -51,8 +51,8 @@ function game_data_hexen() {
 
 function configure_hhexen() {
     mkRomDir "ports/hexen"
-    addPort "$md_id" "hhexen" "Hexen port" "XINIT: $md_inst/hhexen-gl -width 1920 -height 1080"
-     [[ -f "$romdir/ports/hexen/HEXDD.WAD" ]] && addPort "$md_id" "hhexen-dd" "Hexen -Deathkings of the Dark Citadel Port" "XINIT: $md_inst/hhexen-gl -file hexdd.wad -width 1920 -height 1080"
+    addPort "$md_id" "hhexen" "Hexen port" "$md_inst/hhexen-gl -width 1920 -height 1080"
+     [[ -f "$romdir/ports/hexen/HEXDD.WAD" ]] && addPort "$md_id" "hhexen-dd" "Hexen -Deathkings of the Dark Citadel Port" "$md_inst/hhexen-gl -file hexdd.wad -width 1920 -height 1080"
 
     [[ "$md_mode" == "install" ]] && game_data_hexen
 

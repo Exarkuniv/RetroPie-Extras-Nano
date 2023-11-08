@@ -86,7 +86,7 @@ function game_data_gzdoom-system() {
 function configure_gzdoom-system() {
     mkUserDir "$home/.config"
     setConfigRoot ""
-    addEmulator 1 "gzdoom" "doom" "$md_inst/gzdoom +set vid_preferbackend 3 -iwad %ROM%"
+    addEmulator 1 "gzdoom" "doom" "$md_inst/gzdoom -iwad %ROM%"
     addSystem "doom" "DOOM" ".pk3 .wad"
 
     moveConfigDir "$home/.config/gzdoom" "$md_conf_root/gzdoom"

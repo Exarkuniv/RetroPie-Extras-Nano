@@ -63,10 +63,11 @@ _EOF_
 
  cat > "$script" << _EOF_
 #!/bin/bash
-cd $md_inst && ./fallout-ce +set in_tty 0
+cd $md_inst && ./fallout-ce
 _EOF_
 
-    chmod +x "$script"
-    addPort "$md_id" "fallout" "Fallout Community Edition" "$md_inst/fallout1.sh"
-
+    chmod 777 "$script"
+    chmod 777 "$scriptcfg"
+    addPort "$md_id" "fallout" "Fallout Community Edition" "XINIT: $md_inst/fallout1.sh"
+    
 }

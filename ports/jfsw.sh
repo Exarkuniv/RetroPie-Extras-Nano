@@ -27,7 +27,7 @@ function sources_jfsw() {
 }
 
 function build_jfsw() {
-    make DATADIR="$romdir/ports/shadowwarrior" RELEASE=1 USE_POLYMOST=1 USE_OPENGL=USE_GLES2 WITHOUT_GTK=1
+    make DATADIR="$romdir/ports/shadowwarrior" RELEASE=1 USE_POLYMOST=1 USE_OPENGL=1
     md_ret_require="$md_build/sw"
 }
 

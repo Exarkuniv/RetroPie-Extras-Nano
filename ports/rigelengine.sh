@@ -31,7 +31,8 @@ function sources_rigelengine() {
 function build_rigelengine() {
     mkdir $md_build/build
     cd $md_build/build
-    cmake .. -DWARNINGS_AS_ERRORS=ON -DBUILD_TESTS=ON
+    cmake .. -DUSE_GL_ES=ON -DCMAKE_BUILD_TYPE=Release -DWARNINGS_AS_ERRORS=OFF
+
     make
 
     md_ret_require="$md_build/build/src/RigelEngine"
@@ -46,7 +47,6 @@ function install_rigelengine() {
 function game_data_rigelengine() {
     if [[ ! -f "$romdir/ports/duke2/NUKEM2.EXE" ]]; then
         downloadAndExtract "https://github.com/Exarkuniv/game-data/raw/main/duke2.zip" "$romdir/ports/duke2/"
-    #mv "$romdir/ports/duke2/Duke2"* "$romdir/ports/duke2/"
     chown -R $user:$user "$romdir/ports/duke2"
     fi
 }

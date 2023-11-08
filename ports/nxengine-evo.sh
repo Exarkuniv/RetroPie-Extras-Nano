@@ -59,9 +59,10 @@ function gamedata_nxengine-evo() {
 }
 
 function configure_nxengine-evo() {
-    [[ "$md_mode" == "install" ]] && gamedata_nxengine-evo
-    addPort "$md_id" "cavestory" "Cave Story" "$md_inst/nxengine-evo"
     mkRomDir "ports/CaveStory"
+    addPort "$md_id" "cavestory" "Cave Story" "$md_inst/nxengine-evo"
+
     moveConfigDir "$home/.local/share/nxengine" "$md_conf_root/cavestory/$md_id"
+    [[ "$md_mode" == "install" ]] && gamedata_nxengine-evo
 
 }

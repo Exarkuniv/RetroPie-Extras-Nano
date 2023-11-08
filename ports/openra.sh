@@ -14,7 +14,7 @@ rp_module_id="openra"
 rp_module_desc="Open RA - Real Time Strategy game engine supporting early Westwood classics"
 rp_module_licence="GPL3 https://github.com/OpenRA/OpenRA/blob/bleed/COPYING"
 rp_module_help="Currently working on how to pull the Data files No ETA"
-rp_module_section="exp"
+rp_module_section="prt"
 rp_module_flags="!mali"
 
 function depends_openra() {
@@ -55,10 +55,10 @@ function configure_openra() {
 
     moveConfigDir "$home/.config/openra" "$md_conf_root/openra"
 
-    addPort "$md_id" "openra" "Open Red Alert" "XINIT: $md_inst/openra/ORA.sh"
-    addPort "opentd" "opentd" "Open Tiberian Dawn" "XINIT: $md_inst/openra/OTD.sh"
-    addPort "opend2k" "opend2k" "Open Dune2000" "XINIT: $md_inst/openra/OD2K.sh"
-    addPort "opents" "opents" "Open Tiberian Sun" "XINIT: $md_inst/openra/OTS.sh"
+    addPort "$md_id" "openra" "Open Red Alert" "$md_inst/openra/ORA.sh"
+    addPort "opentd" "opentd" "Open Tiberian Dawn" "$md_inst/openra/OTD.sh"
+    addPort "opend2k" "opend2k" "Open Dune2000" "$md_inst/openra/OD2K.sh"
+    addPort "opents" "opents" "Open Tiberian Sun" "$md_inst/openra/OTS.sh"
 
  #running script for Red Alert
 cat >"$md_inst/openra/ORA.sh" << _EOF_
