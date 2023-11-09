@@ -3,6 +3,16 @@ RetroPie Extras install scripts for Jetson Nano
 
 This is all WIP right now. 
 
+The following commands clone the repo to your Jetson Nano and then run install-scripts.sh to install the scripts in the master branch directly to the proper directories in the ARES-Setup/ folder.
+
+```
+cd ~
+git clone https://github.com/Exarkuniv/Ares-Nano-Extras.git
+sudo chmod 755 ~/Ares-Nano-Extras/install-extras.sh
+cd ~/Ares-Nano-Extras && ./install-extras.sh
+```
+
+
 **UPDATE**
 AS id 10-19-23 Im still working on these, i have got more of the older ones to work and will update soonish. 
 i have come across a few bugs and a script that breaks something with the cmake. so im hunting that down and seeing WTF is up with that
