@@ -8,8 +8,8 @@ The following commands clone the repo to your Jetson Nano and then run install-s
 ```
 cd ~
 git clone https://github.com/Exarkuniv/Ares-Nano-Extras.git
-cd Ares-Nano-Extras/
-./install-extras.sh
+sudo chmod 755 ~/Ares-Nano-Extras/install-extras.sh
+cd ~/Ares-Nano-Extras && ./install-extras.sh
 ```
 
 
