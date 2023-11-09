@@ -12,7 +12,6 @@ cd Ares-Nano-Extras/
 ./install-extras.sh
 ```
 
-The installation script assumes that you are running it on a Raspberry Pi with the RetroPie-Setup/ folder being stored in /home/pi/RetroPie-Setup. If your setup differs, just copy the scripts directly to the folder they need to be in.
 
 **UPDATE**
 AS id 10-19-23 Im still working on these, i have got more of the older ones to work and will update soonish. 
