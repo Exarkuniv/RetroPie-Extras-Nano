@@ -14,7 +14,7 @@ rp_module_licence="GPL2 https://raw.githubusercontent.com/libretro/dosbox-pure/m
 rp_module_section="lr"
 
 function sources_lr-dosbox-pure() {
-    gitPullOrClone "$md_build" https://github.com/libretro/dosbox-pure.git
+    gitPullOrClone "$md_build" https://github.com/libretro/dosbox-pure.git "main"
 }
 
 function build_lr-dosbox-pure() {

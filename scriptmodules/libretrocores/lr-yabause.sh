@@ -16,7 +16,7 @@ rp_module_desc="Sega Saturn emu - Yabause (optimised) port for libretro"
 rp_module_help="ROM Extensions: .iso .bin .zip\n\nCopy your Sega Saturn roms to $romdir/saturn\n\nCopy the required BIOS file saturn_bios.bin to $biosdir"
 rp_module_licence="GPL2 https://raw.githubusercontent.com/libretro/yabause/master/yabause/COPYING"
 rp_module_section="lr"
-rp_module_flags="!all"
+
 
 function sources_lr-yabause() {
     gitPullOrClone "$md_build" https://github.com/libretro/yabause.git
@@ -28,7 +28,7 @@ function build_lr-yabause() {
     if isPlatform "neon"; then
         make platform=armvneonhardfloat
     else
-        make
+        make HAVE_SSE=0
     fi
     md_ret_require="$md_build/yabause/src/libretro/yabause_libretro.so"
 }
@@ -49,5 +49,4 @@ function configure_lr-yabause() {
 
     addEmulator 0 "$md_id" "saturn" "$md_inst/yabause_libretro.so"
     addSystem "saturn"
-	
 }

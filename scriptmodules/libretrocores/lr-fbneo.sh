@@ -44,7 +44,6 @@ function install_lr-fbneo() {
         'src/burner/libretro/fbneo_libretro.so'
         'gamelist.txt'
         'whatsnew.html'
-        'preset-example.zip'
         'metadata'
         'dats'
     )
