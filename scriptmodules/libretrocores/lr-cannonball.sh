@@ -57,4 +57,5 @@ function configure_lr-cannonball() {
     fi
 
     ensureSystemretroconfig "ports/cannonball"
+
 }

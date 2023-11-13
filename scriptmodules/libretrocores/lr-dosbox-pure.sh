@@ -37,4 +37,5 @@ function configure_lr-dosbox-pure() {
 
     addEmulator 0 "$md_id" "pc" "$md_inst/dosbox_pure_libretro.so"
     addSystem "pc"
+
 }
