@@ -76,4 +76,16 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <command>/opt/ares/supplementary/runcommand/runcommand.sh 0 _SYS_ solarus %ROM%</command>
     <platform>solarus</platform>
     <theme>solarus</theme>
+	<system>
 	```
+	```
+<system>
+    <name>doom</name>
+    <fullname>DOOM</fullname>
+    <path>/home/aresuser/ARES/roms/doom</path>
+    <extension>.sh .SH</extension>
+    <command>bash %ROM%</command>
+    <platform>doom</platform>
+    <theme>doom</theme>
+  </system>
+  ```
