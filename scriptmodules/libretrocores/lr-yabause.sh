@@ -47,6 +47,5 @@ function configure_lr-yabause() {
     mkRomDir "saturn"
     ensureSystemretroconfig "saturn"
 
-    addEmulator 0 "$md_id" "saturn" "$md_inst/yabause_libretro.so"
-    addSystem "saturn"
+    cp "$md_inst/yabause_libretro.so" "/home/aresuser/.config/retroarch/cores"
 }

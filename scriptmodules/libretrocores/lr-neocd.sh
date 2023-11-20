@@ -36,13 +36,8 @@ function install_lr-neocd() {
 }
 
 function configure_lr-neocd() {
-    
-        mkRomDir "neocdz"
-        ensureSystemretroconfig "neocdz"
-		addSystem "neocdz"
-	    addEmulator 1 "$md_id" "neocdz" "$md_inst/neocd_libretro.so"
-   
-    
+    mkRomDir "neocdz"
+    ensureSystemretroconfig "neocdz"
+    cp "$md_inst/neocd_libretro.so" "/home/aresuser/.config/retroarch/cores"
 
-    
 }

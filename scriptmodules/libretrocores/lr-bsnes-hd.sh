@@ -43,9 +43,6 @@ function install_lr-bsnes-hd() {
 
 function configure_lr-bsnes-hd() {
     mkRomDir "snes"
-    defaultRAConfig "snes"
-
-    addEmulator 0 "$md_id" "snes" "$md_inst/bsnes_hd_beta_libretro.so"
-    addSystem "snes"
+    cp "$md_inst/bsnes_hd_beta_libretro.so" "/home/aresuser/.config/retroarch/cores"
 
 }

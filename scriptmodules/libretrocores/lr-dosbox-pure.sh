@@ -34,8 +34,5 @@ function install_lr-dosbox-pure() {
 function configure_lr-dosbox-pure() {
     mkRomDir "pc"
     ensureSystemretroconfig "pc"
-
-    addEmulator 0 "$md_id" "pc" "$md_inst/dosbox_pure_libretro.so"
-    addSystem "pc"
-
+    cp "$md_inst/dosbox_pure_libretro.so" "/home/aresuser/.config/retroarch/cores"
 }

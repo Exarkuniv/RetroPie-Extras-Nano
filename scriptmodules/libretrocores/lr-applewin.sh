@@ -71,15 +71,7 @@ function install_lr-applewin() {
 function configure_lr-applewin() {
     mkRomDir "apple2"
 
-    if [[ "$md_mode" == "install" ]] ; then
-        defaultRAConfig "apple2" "input_auto_game_focus" "0" # 0: off, 1: on, 2: detect
-        defaultRAConfig "apple2" "load_dummy_on_core_shutdown" "false"
-        # Disable at all if defined in parent Retroarch configs or
-        # adjust button number below to your controller setup.
-        # cf: https://retropie.org.uk/docs/RetroArch-Configuration/#determining-button-values
-        defaultRAConfig "apple2" "input_game_focus_toggle_btn" "3"
-    fi
-
+    cp "$md_inst/applewin_libretro.so" "/home/aresuser/.config/retroarch/cores"
     addEmulator 0 "$md_id" "apple2" "$md_inst/applewin_libretro.so"
     addSystem "apple2"
 

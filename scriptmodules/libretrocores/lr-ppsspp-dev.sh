@@ -51,15 +51,5 @@ function configure_lr-ppsspp-dev() {
         iniSet "savefile_directory" "$home/.config/ppsspp"
         moveConfigDir "$home/.config/ppsspp" "$md_conf_root/psp"
     fi
-
-    addEmulator 1 "$md_id" "psp" "$md_inst/ppsspp_libretro.so"
-    addSystem "psp"
-
-    # if we are removing the last remaining psp emu - remove the symlink
-    if [[ "$md_mode" == "remove" ]]; then
-        if [[ -h "$home/.config/ppsspp" && ! -f "$md_conf_root/psp/emulators.cfg" ]]; then
-            rm -f "$home/.config/ppsspp"
-        fi
-    fi
-
+    cp "$md_inst/ppsspp_libretro.so" "/home/aresuser/.config/retroarch/cores"
 }

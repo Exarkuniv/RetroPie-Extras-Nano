@@ -42,6 +42,8 @@ function install_lr-dinothawr() {
 
 function configure_lr-dinothawr() {
     setConfigRoot "ports"
+    mkdir -p "/opt/ares/emulators/retroarch/bin/retroarch"
+    ln -sf "/usr/local/bin/retroarch" "/opt/ares/emulators/retroarch/bin/retroarch"
 
     addPort "$md_id" "dinothawr" "Dinothawr" "$md_inst/dinothawr_libretro.so" "$romdir/ports/dinothawr/dinothawr.game"
 

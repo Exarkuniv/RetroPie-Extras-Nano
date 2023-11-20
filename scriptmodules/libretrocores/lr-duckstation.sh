@@ -45,7 +45,6 @@ function configure_lr-duckstation() {
     setRetroArchCoreOption "duckstation_MemoryCards.Card1Type" "NonPersistent"
 
     # dynarec segfaults without redirecting stdin from </dev/null
-    addEmulator 0 "$md_id" "psx" "$md_inst/duckstation_libretro.so </dev/null"
-    addSystem "psx"
+    cp "$md_inst/duckstation_libretro.so" "/home/aresuser/.config/retroarch/cores"
 
 }

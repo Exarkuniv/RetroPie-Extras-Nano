@@ -44,6 +44,9 @@ function game_data_lr-cannonball() {
     downloadAndExtract "http://buildbot.libretro.com/assets/cores/Cannonball/CannonBall.zip" "$romdir/ports/"
     cp -Rv "$md_inst/CannonBall.game" "$romdir/ports/cannonball"
     chown -R $user:$user "$romdir/ports/cannonball"
+    mkdir -p "/opt/ares/emulators/retroarch/bin/retroarch"
+    ln -sf "/usr/local/bin/retroarch" "/opt/ares/emulators/retroarch/bin/retroarch"
+
 }
 
 function configure_lr-cannonball() {

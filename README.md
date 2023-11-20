@@ -38,6 +38,42 @@ you will have to switch it to HDMI if thats what you have.
 
 i install the ``PulseAudio Volume Control`` app and just disable analog output, since using command line was abit confusing. 
 
-to get the **rigelengine, tfe, dxx-rebirth, nblood, rednukem, and pcexhumed**  script to install, you need to change the GCC and G++ from version 7 to version 10 and 11
+to get the **rigelengine, tfe, dxx-rebirth, nblood, rednukem, and pcexhumed and others**  script to install, you need to change the GCC and G++ from version 7 to version 10 and 11
 
 so use ``sudo update-alternatives --config gcc`` and ``sudo update-alternatives --config g++`` and change it to whatever number the higher version is on your system
+
+
+here is what is needed to be added to the ``es_system.cfg`` for things to work or be seen
+
+```
+<system>
+    <name>supermodel</name>
+    <fullname>Sega supermodel 3</fullname>
+    <path>/home/aresuser/ARES/roms/model3</path>
+    <extension>.zip  .ZIP </extension>
+    <command>/opt/ares/supplementary/runcommand/runcommand.sh 0 _SYS_ model3 %ROM%</command>
+    <platform>supermodel</platform>
+    <theme>model3</theme>
+  </system>
+  ```
+    ```
+	<system>
+    <name>ports</name>
+    <fullname>Ports</fullname>
+    <path>/home/aresuser/ARES/roms/ports</path>
+    <extension>.sh .SH</extension>
+    <command>bash %ROM%</command>
+    <platform>pc</platform>
+    <theme>ports</theme>
+  </system>
+  ```
+  ```
+    <system>
+    <name>solarus</name>
+    <fullname>Solarus Engine</fullname>
+    <path>/home/aresuser/ARES/roms/solarus</path>
+    <extension>.solarus .zip .SOLARUS .ZIP</extension>
+    <command>/opt/ares/supplementary/runcommand/runcommand.sh 0 _SYS_ solarus %ROM%</command>
+    <platform>solarus</platform>
+    <theme>solarus</theme>
+	```
