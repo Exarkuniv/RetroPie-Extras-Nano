@@ -1,8 +1,6 @@
 # RetroPie-Extras-Nano
 RetroPie Extras install scripts for Jetson Nano
 
-This is all WIP right now. 
-
 The following commands clone the repo to your Jetson Nano and then run install-scripts.sh to install the scripts in the master branch directly to the proper directories in the ARES-Setup/ folder.
 
 ```
@@ -14,13 +12,8 @@ cd ~/Ares-Nano-Extras && ./install-extras.sh
 
 
 **UPDATE**
-AS id 10-19-23 Im still working on these, i have got more of the older ones to work and will update soonish. 
-i have come across a few bugs and a script that breaks something with the cmake. so im hunting that down and seeing WTF is up with that
+AS id 11-27-23 I think for the most part this is good to go. of course odd things come up, but i belive i got most of it cleaned up
 
-I still have a handfull of edits i need to get done, but as of 9-20-23 all the scripts do install. and almost all do play
-there are a few i have not tested yet as i dont have the game files (yet)
-
-I will also go through all the normal port scripts that the other boards have and see what works and what dont
 
 if you want background music i have figured that out also
 all you need to do is add a ``music`` folder here 
