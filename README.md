@@ -48,8 +48,8 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <platform>supermodel</platform>
     <theme>model3</theme>
   </system>
-  ```
-    ```
+  
+    
 	<system>
     <name>ports</name>
     <fullname>Ports</fullname>
@@ -59,9 +59,9 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <platform>pc</platform>
     <theme>ports</theme>
   </system>
-  ```
   
-  ```
+  
+  
     <system>
     <name>solarus</name>
     <fullname>Solarus Engine</fullname>
@@ -71,9 +71,9 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <platform>solarus</platform>
     <theme>solarus</theme>
 	<system>
-	```
+	
 
-	```
+
 <system>
     <name>doom</name>
     <fullname>DOOM</fullname>
