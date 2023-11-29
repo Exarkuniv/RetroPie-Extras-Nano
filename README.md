@@ -60,6 +60,7 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <theme>ports</theme>
   </system>
   ```
+  
   ```
     <system>
     <name>solarus</name>
@@ -71,6 +72,7 @@ here is what is needed to be added to the ``es_system.cfg`` for things to work o
     <theme>solarus</theme>
 	<system>
 	```
+
 	```
 <system>
     <name>doom</name>
