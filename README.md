@@ -1,6 +1,9 @@
 # RetroPie-Extras-Nano
 RetroPie Extras install scripts for Jetson Nano
 
+they are working on getting Port Master to work on the Nano
+once that happened, i will delete this retpo as it will be worthless
+
 The following commands clone the repo to your Jetson Nano and then run install-scripts.sh to install the scripts in the master branch directly to the proper directories in the ARES-Setup/ folder.
 
 ```
