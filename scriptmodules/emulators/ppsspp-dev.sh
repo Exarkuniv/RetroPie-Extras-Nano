@@ -120,9 +120,6 @@ function build_ppsspp-dev() {
         cmake="$md_build/cmake/bin/cmake"
     fi
 
-    # build ffmpeg
-    build_ffmpeg_ppsspp-dev "$md_build/ppsspp/ffmpeg"
-
     # build ppsspp
     cd "$md_build/ppsspp"
     rm -rf CMakeCache.txt CMakeFiles
