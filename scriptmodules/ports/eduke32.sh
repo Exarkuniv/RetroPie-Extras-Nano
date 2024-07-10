@@ -36,21 +36,7 @@ function depends_eduke32() {
 }
 
 function sources_eduke32() {
-    git config --global http.sslverify false
-    # was svn rev -r8090
-    local revision="dfc16b08"
-
-    gitPullOrClone "$md_build" https://voidpoint.io/terminx/eduke32.git "" "$revision"
-
-    # r6918 causes a 20+ second delay on startup on ARM devices
-    isPlatform "arm" && applyPatch "$md_data/0001-revert-r6918.patch"
-    # r7424 gives a black skybox when r_useindexedcolortextures is 0
-    applyPatch "$md_data/0002-fix-skybox.patch"
-    # r6776 breaks VC4 & GLES 2.0 devices that lack GL_RED internal
-    # format support for glTexImage2D/glTexSubImage2D
-    isPlatform "gles" && applyPatch "$md_data/0003-replace-gl_red.patch"
-    # gcc 6.3.x compiler fix
-    applyPatch "$md_data/0004-recast-function.patch"
+    gitPullOrClone "$md_build" https://voidpoint.io/terminx/eduke32.git "master"
 }
 
 function build_eduke32() {
