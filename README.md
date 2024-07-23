@@ -38,6 +38,9 @@ to get the **rigelengine, tfe, dxx-rebirth, nblood, rednukem, and pcexhumed and 
 
 so use ``sudo update-alternatives --config gcc`` and ``sudo update-alternatives --config g++`` and change it to whatever number the higher version is on your system
 
+ ``sudo ~/ARES-Setup/ares_setup.sh``
+
+ ``wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | sudo tee /usr/share/keyrings/kitware-archive-keyring.gpg >/dev/null``
 
 here is what is needed to be added to the ``es_system.cfg`` for things to work or be seen
 
